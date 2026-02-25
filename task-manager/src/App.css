@@ -1,106 +1,76 @@
-/* ===== BODY ===== */
 body {
   margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
-
-  /* background image */
   background: url("https://images.unsplash.com/photo-1518770660439-4636190af475")
     no-repeat center center/cover;
-
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* ===== MAIN CARD ===== */
 .container {
-  width: 420px;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.75);
   padding: 25px;
   border-radius: 12px;
-  backdrop-filter: blur(6px);
+  width: 400px;
   color: white;
 }
 
-/* ===== TITLE ===== */
 h1 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 34px;
 }
 
-/* ===== INPUT AREA ===== */
 .input-area {
   display: flex;
   gap: 10px;
-  margin-bottom: 15px;
 }
 
 input[type="text"] {
   flex: 1;
-  padding: 10px;
-  border: none;
+  padding: 8px;
   border-radius: 6px;
-  outline: none;
+  border: none;
 }
 
-/* ===== BUTTON ===== */
 button {
-  background: #00bfff;
+  background: #00cfe8;
   border: none;
-  padding: 8px 14px;
-  color: white;
+  padding: 8px 12px;
   border-radius: 6px;
   cursor: pointer;
-  transition: 0.3s;
+  color: white;
 }
 
-button:hover {
-  background: #0099cc;
-}
-
-/* ===== FILTER BUTTONS ===== */
 .filter-buttons {
+  margin-top: 15px;
   display: flex;
   gap: 10px;
-  margin-bottom: 15px;
 }
 
-/* ===== TASK LIST ===== */
+.clear-btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
 ul {
   list-style: none;
   padding: 0;
+  margin-top: 15px;
 }
 
 li {
-  background: rgba(255, 255, 255, 0.12);
-  padding: 10px;
-  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
   margin-bottom: 8px;
-
+  padding: 8px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 li span {
-  margin-left: 8px;
-}
-
-/* ===== TASK LEFT SIDE ===== */
-.task-left {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* ===== DELETE BUTTON ===== */
-.delete-btn {
-  background: #ff4d4d;
-}
-
-.delete-btn:hover {
-  background: #e60000;
+  flex: 1;
+  margin-left: 10px;
 }

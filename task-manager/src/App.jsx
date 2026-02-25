@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [filter, setFilter] = useState("all");
 
-  // LOAD TASKS
+  // LOAD TASKS (when app opens)
   useEffect(() => {
     const saved = localStorage.getItem("tasks");
     if (saved) {
@@ -14,7 +14,7 @@ function App() {
     }
   }, []);
 
-  // SAVE TASKS
+  // SAVE TASKS (whenever tasks change)
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
@@ -62,6 +62,7 @@ function App() {
     <div className="container">
       <h1>Smart Task Manager</h1>
 
+      {/* INPUT AREA */}
       <div className="input-area">
         <input
           type="text"
@@ -80,13 +81,14 @@ function App() {
         <button onClick={() => setFilter("pending")}>Pending</button>
       </div>
 
-      {/* CLEAR ALL */}
+      {/* CLEAR BUTTON */}
       {tasks.length > 0 && (
         <button className="clear-btn" onClick={clearAllTasks}>
           Clear All
         </button>
       )}
 
+      {/* TASK LIST */}
       <ul>
         {filteredTasks.map((t, index) => (
           <li key={index}>
